@@ -80,9 +80,9 @@ server <- function(input, output) {
   
   #plot Iris Data with Labels
   output$iris_barplot <- renderPlot({p<- barplot(iris_means() ,main = paste("Mean", input$iris_category, "by Species"), xlab  = "Species", ylab = "Mean (cm)", 
-                                        col = c(input$setosa_color, input$versicolor_color, input$virginica_color), names.arg = c("Setosa", "Versicolor", "Virginica"), ylim = iris_ylim())
-                                    #Add a text label to display the height of each bar
-                                      text(x = p, y = iris_means(), label = iris_means(), pos = 3)#pos = 3 tells us we want to adjust the label on the top
+   col = c(input$setosa_color, input$versicolor_color, input$virginica_color), names.arg = c("Setosa", "Versicolor", "Virginica"), ylim = iris_ylim())
+  #Add a text label to display the height of each bar
+    text(x = p, y = iris_means(), label = iris_means(), pos = 3)#pos = 3 tells us we want to adjust the label on the top
   })
   
   #Show table with the means
